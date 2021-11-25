@@ -1,0 +1,263 @@
+.this {
+  border: 5px dashed red;
+}
+:root {
+  --main-GreenColor: #2a9134;
+  --main-LightGreenColor: #90b44b;
+  --main-WhiteColor: #f1fffa;
+  --main-LightDarkColor: #242424;
+  --main-YellowColor: rgb(249, 228, 148);
+  --main-PinkColor: #ef7998;
+  --main-BlackColor: #071013;
+}
+
+/* ========== 共同設計 ========== */
+.banner-title{
+  font-size: 76px;
+  color: var(--main-PinkColor);
+}
+
+.btn-Black{
+  border-color: var(--main-BlackColor);
+}
+.btn-Black:hover{
+  background-color: var(--main-BlackColor);
+  color: var(--main-PinkColor);
+}
+
+.btn-Green{
+  border: 5px solid var(--main-WhiteColor)!important;
+  color: var(--main-GreenColor);
+  width: 500px;
+}
+.btn-Green:hover{
+  background-color: var(--main-WhiteColor)!important;
+  color: var(--main-WhiteColor);
+}
+/* ========== 共同設計 End ========== */
+
+
+/* ========== header toggler ========== */
+header{
+  height: 90px;
+}
+
+header .navbar{
+   background: rgb(23,106,182);
+   background: linear-gradient(180deg, rgba(23,106,182,1) 0%, rgba(24,148,195,1) 45%, rgba(15,74,133,1) 100%); 
+}
+
+header .navbar a{
+  color: var(--main-WhiteColor)!important;
+  font-weight: bold;
+}
+
+header .navbar .navbar-nav{
+  margin : auto;
+  font-size: 20px;
+}
+
+header .navbar .navbar-toggler div{
+  width: 25px;
+  height: 3px;
+  background-color: var(--main-GreenColor)!important;
+  margin: 5px;
+  transition: all 0.5s;
+}
+
+header .navbar .navbar-toggler .bar1.change{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+
+header .navbar .navbar-toggler .bar2.change{
+  opacity: 0;
+}
+
+header .navbar .navbar-toggler .bar3.change{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+header .navbar .navbar-nav .nav-item{
+  font-size: 16px;
+  padding: 8px;
+}
+
+
+body {
+  font-family: 微軟正黑體;
+  /*background-color: whitesmoke;*/
+}
+
+header li:hover{
+  background: rgb(23,106,182)!important;
+}
+
+/*---section-1---*/
+
+.section-1 {
+  width: 100%;
+  height: calc(90vh - 50px);
+  padding: 0  0 20px 140px; 
+  position: relative;
+  background: whitesmoke;
+  margin-top: -20px;
+}
+.section-1 img {
+  height: 150%;  
+  /*float: right;*/
+  /*margin-right: 10%;*/
+  animation: slideInRight 1s both; 
+  position: absolute; 
+  top :-20%;
+  right: 5%;
+}
+.section-1 .infomation {
+  padding: 10px; 
+  animation: slideInLeft 1.3s both;
+  position: absolute;
+  top: 30%;
+}
+
+.section-1 span {
+  font-size: 70px;
+}
+
+.section-1 .infomation h2 {
+  font-size: 60px;
+  font-weight: 900;
+}
+.section-1 .infomation p {
+  font-size: 27px;
+}
+
+/*---section-2---*/
+
+.section-2 {
+  width: 100%;
+  height: calc(50vh - 50px);
+  position: relative;  
+}
+
+.shape_cover {
+  /*position:absolute;  
+  bottom:-450px;*/
+  z-index: 999;
+  padding: 30px;
+  width: 100%;
+  height: 550px;
+  margin-top: -50px;
+  color: white;
+  clip-path: polygon(0% 0%, 100% 5%, 100% 80%, 0% 90%);
+  background: rgb(23,106,182);
+  background: linear-gradient(90deg, rgba(23,106,182,1) 0%, rgba(24,148,195,1) 45%, rgba(15,74,133,1) 100%); 
+}
+
+.section-2 .infomation {
+  width: 400px; 
+  padding: 10px; 
+  animation: slideInLeft 1.3s both;
+  position: absolute;
+  top: 20%;
+  left: 140px;
+}
+.shape_cover h2 {
+  font-size: 60px;
+  font-weight: 900;
+  color: whitesmoke;
+}
+.shape_cover p {
+  font-size: 27px;
+  color: whitesmoke;
+}
+
+/*---section-3---*/
+
+.section-3{
+  padding: 300px calc(30vw / 2 ) 200px;
+  display: flex;
+  background-color: whitesmoke;
+}
+
+.section-3 div{
+  flex:1;
+  margin:10px 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white!important;
+  border-radius: 25px;
+}
+
+.section-3 img{
+  width: 100%;
+  border-radius: 25px;
+}
+
+.section-3 p{
+  margin-top: 15px;
+  font-size: 27px;
+}
+
+.button{
+  width: 200px;
+  padding: 5px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid rgb(23,106,182);
+  background-color: transparent;
+  color: black ;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.section-3 span{
+  /*background: rgb(23, 106,182)!important;*/
+  background: linear-gradient(90deg, rgba(23,106,182,1) 0%, rgba(24,148,195,1) 100%); 
+  height: 100%;
+  width:  0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s ; 
+}
+
+.button:hover span{
+  width: 100%;
+
+}
+
+.button:hover{
+  border: none;
+  color: white;
+}
+
+/*---animation---*/
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
